@@ -15,6 +15,7 @@ code {
   margin-left:200px;
   margin-top: 10px;
   margin-bottom: 10px;
+
  
 }
 .footer{
@@ -25,10 +26,12 @@ code {
   text-align: center;
 
 }
-.minMain{
-  padding-left: 200px;
-  padding-right: 300px;
-  margin-top: 30px;
-  margin-bottom:30px;
+
+ .mincard{
   background-color: rgb(196, 190, 190);
-}
+  /* margin-top: 30px;
+  margin-bottom:30px; */
+  /* margin-right: 500px; */
+  
+
+} 
