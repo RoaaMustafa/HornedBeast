@@ -3,7 +3,7 @@ class Header extends React.Component {
   render() {
     return (
       <div className='header'>
-        <h1>lab02 boostrap in react</h1>
+        <h1>Gallery Of Horns</h1>
       </div>
     );
   }
