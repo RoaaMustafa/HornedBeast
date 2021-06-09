@@ -7,50 +7,62 @@ import jsonSData from './component/data.json';
 import SelectedBeast from './component/SelectedBeast';
 
 
-
 class App extends React.Component {
 
   constructor(props) {
     super(props);
-
     this.state = {
-      data: jsonSData,
-      show: false,
-      details: {}
+
+      hornedData: jsonSData,
+      SelectedBeastContentFromState: '',
+      SelectedBeastContentFromState2: '',
+      SelectedBeastContentFromState3: '',
+      show: false
+
+
+
     };
   }
+  // modalShowFunction=()=>{
 
+  // }
+  handleClose = () => {
+    this.setState({ show: false });
+  }
 
-  viewBeast = (card) => {
+  changingStateDataFunction = (selectedData, selectedData2, selectedData3) => {
+
+    //  let newArr= jsonSDatas.find(element=> element.horns===2)
 
     this.setState(
       {
-        show: true,
-        details: card
-      });
+        SelectedBeastContentFromState: selectedData,
+        SelectedBeastContentFromState2: selectedData2,
+        SelectedBeastContentFromState3: selectedData3,
+        show: true
+      }
+    );
+    // this.modalShowFunction()
+
 
   }
 
-  close = () => {
-    this.setState({
-      show: false,
-      details: {}
-    });
-  }
+
 
 
   render() {
     return (
-      <div>
+      <>
         <Header />
-        <SelectedBeast show={this.state.show} close={this.close} details={this.state.details} />
-        <Main data={this.state.data} viewBeast={this.viewBeast} />
+        <Main hornedDataMain={this.state.hornedData} functionProp={this.changingStateDataFunction} />
+
+        <SelectedBeast SelectedBeastContent={this.state.SelectedBeastContentFromState} SelectedBeastContent2={this.state.SelectedBeastContentFromState2} SelectedBeastContent3={this.state.SelectedBeastContentFromState3} modalShowFunction={this.state.show} handleClose={this.handleClose} > </SelectedBeast>
         <Footer />
-      </div>
+      </>
+
     );
-
   }
-}
 
+}
 
 export default App;
