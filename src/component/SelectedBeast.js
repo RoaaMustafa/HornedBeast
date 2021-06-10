@@ -9,9 +9,9 @@ class SelectedBeast extends React.Component {
     return (
       <>
 
-        <Modal show={this.props.modalShowFunction}>
+        <Modal show={this.props.modalShowFunction} onHide={this.props.handleClose}>
 
-          <Modal.Header>
+          <Modal.Header  closeButton show={this.props.modalShowFunction} onHide={this.props.handleClose}>
             {this.props.SelectedBeastContent}
           </Modal.Header>
 
