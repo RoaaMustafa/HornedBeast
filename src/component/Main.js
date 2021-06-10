@@ -17,8 +17,8 @@ class Main extends React.Component {
 
   }
 
-  prop1Function = (selectedData, selectedData2, selectedData3) => {
-    this.props.functionProp(selectedData, selectedData2, selectedData3);
+  prop1Function = (headerData,bodyData,footerData) => {
+    this.props.functionProp(headerData,bodyData,footerData);
 
 
   }

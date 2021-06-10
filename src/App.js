@@ -14,35 +14,31 @@ class App extends React.Component {
     this.state = {
 
       hornedData: jsonSData,
-      SelectedBeastContentFromState: '',
-      SelectedBeastContentFromState2: '',
-      SelectedBeastContentFromState3: '',
+      SelectedBeastHeader: '',
+      SelectedBeastBody: '',
+      SelectedBeastFooter: '',
       show: false
 
 
 
     };
   }
-  // modalShowFunction=()=>{
 
-  // }
   handleClose = () => {
     this.setState({ show: false });
   }
 
-  changingStateDataFunction = (selectedData, selectedData2, selectedData3) => {
+  changingStateDataFunction = (headerData,bodyData,footerData) => {
 
-    //  let newArr= jsonSDatas.find(element=> element.horns===2)
 
     this.setState(
       {
-        SelectedBeastContentFromState: selectedData,
-        SelectedBeastContentFromState2: selectedData2,
-        SelectedBeastContentFromState3: selectedData3,
+        SelectedBeastHeader:headerData,
+        SelectedBeastBody:bodyData,
+        SelectedBeastFooter:footerData,
         show: true
       }
     );
-    // this.modalShowFunction()
 
 
   }
@@ -56,7 +52,7 @@ class App extends React.Component {
         <Header />
         <Main hornedDataMain={this.state.hornedData} functionProp={this.changingStateDataFunction} />
 
-        <SelectedBeast SelectedBeastContent={this.state.SelectedBeastContentFromState} SelectedBeastContent2={this.state.SelectedBeastContentFromState2} SelectedBeastContent3={this.state.SelectedBeastContentFromState3} modalShowFunction={this.state.show} handleClose={this.handleClose} > </SelectedBeast>
+        <SelectedBeast SelectedBeastHeader={this.state.SelectedBeastHeader} SelectedBeastBody={this.state.SelectedBeastBody} SelectedBeastFooter={this.state.SelectedBeastFooter} modalShowFunction={this.state.show} handleClose={this.handleClose} > </SelectedBeast>
         <Footer />
       </>
 
