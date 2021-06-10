@@ -50,7 +50,7 @@ class App extends React.Component {
     return (
       <>
         <Header />
-        <Main hornedDataMain={this.state.hornedData} functionProp={this.changingStateDataFunction} />
+        <Main hornedDataMain={this.state.hornedData} getDataFromApp={this.changingStateDataFunction} />
 
         <SelectedBeast SelectedBeastHeader={this.state.SelectedBeastHeader} SelectedBeastBody={this.state.SelectedBeastBody} SelectedBeastFooter={this.state.SelectedBeastFooter} modalShowFunction={this.state.show} handleClose={this.handleClose} > </SelectedBeast>
         <Footer />

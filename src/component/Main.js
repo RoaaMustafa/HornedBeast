@@ -17,8 +17,8 @@ class Main extends React.Component {
 
   }
 
-  prop1Function = (headerData,bodyData,footerData) => {
-    this.props.functionProp(headerData,bodyData,footerData);
+  gettinSelectedData = (headerData,bodyData,footerData) => {
+    this.props.getDataFromApp(headerData,bodyData,footerData);
 
 
   }
@@ -72,7 +72,7 @@ class Main extends React.Component {
                     title={item.title}
                     imgSrc={item.image_url}
                     description={item.description}
-                    prop2Function={() => this.prop1Function(item.title, item.image_url, item.description)} />
+                    passingDataTOModalfromMain={() => this.gettinSelectedData(item.title, item.image_url, item.description)} />
 
 
 

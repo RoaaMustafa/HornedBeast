@@ -23,8 +23,8 @@ class HornedBeasts extends React.Component {
     );
   }
 
-  prop3Function = () => {
-    this.props.prop2Function();
+  displayModal = () => {
+    this.props.passingDataTOModalfromMain();
 
   }
 
@@ -33,7 +33,7 @@ class HornedBeasts extends React.Component {
       <>
 
         <CardColumns className={CardColumns}>
-          <Card style={{ width: '18rem' }} className="text-center" onClick={this.prop3Function}>
+          <Card style={{ width: '18rem' }} className="text-center" onClick={this.displayModal}>
             <Card.Body>
               <Card.Title>{this.props.title}</Card.Title>
               <Card.Img onClick={this.favouriteCounter} src={this.props.imgSrc} />
