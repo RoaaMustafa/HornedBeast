@@ -1,5 +1,7 @@
 import React from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button} from 'react-bootstrap';
+import CardColumns from 'react-bootstrap/CardColumns';
+
 
 
 
@@ -30,21 +32,22 @@ class HornedBeasts extends React.Component {
     return (
       <>
 
+        <CardColumns className={CardColumns}>
+          <Card style={{ width: '18rem' }} className="text-center" onClick={this.prop3Function}>
+            <Card.Body>
+              <Card.Title>{this.props.title}</Card.Title>
+              <Card.Img onClick={this.favouriteCounter} src={this.props.imgSrc} />
+              <Card.Text>
+                {this.props.description}
+              </Card.Text>
+              <Card.Text>
+                Likes :{this.state.counter} ❤️
+              </Card.Text>
+              <Button onClick={this.prop3Function} variant="primary">Like 👍</Button>
 
-        <Card style={{ width: '18rem' }} className="text-center">
-          <Card.Body>
-            <Card.Title>{this.props.title}</Card.Title>
-            <Card.Img onClick={this.favouriteCounter} src={this.props.imgSrc} />
-            <Card.Text>
-              {this.props.description}
-            </Card.Text>
-            <Card.Text>
-              favourit❤️:{this.state.counter}
-            </Card.Text>
-            <Button onClick={this.prop3Function} variant="primary">VOTE </Button>
-
-          </Card.Body>
-        </Card>
+            </Card.Body>
+          </Card>
+        </CardColumns >
 
 
 

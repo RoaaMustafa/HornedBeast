@@ -1,5 +1,3 @@
-  text-align: center;
-}
 
 .App-logo {
   height: 40vmin;
@@ -12,4 +10,9 @@
   }
 }
 
-
+.CardCulumns{
+margin-left: 10px;
+}
+.text-center{
+  margin-left: 10px;
+}
